@@ -1,6 +1,7 @@
 from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 from routes.explain import router as explain_router
+from routes.get_pdf import router as get_pdf
 
 app=FastAPI()
 
@@ -12,3 +13,4 @@ app.add_middleware(
 )
 
 app.include_router(explain_router,prefix="/api")
+app.include_router(get_pdf,prefix="/get_pdf")

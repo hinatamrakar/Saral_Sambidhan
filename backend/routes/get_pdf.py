@@ -1,6 +1,9 @@
 from fastapi.responses import FileResponse
+from fastapi import APIRouter
+router=APIRouter()
 
 # PDF route
-@app.get("/pdf/Constitution")
+@router.get("/pdf/Constitution")
 async def get_pdf():
     return FileResponse("resources/Constitution.pdf")
+
