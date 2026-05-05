@@ -9,8 +9,8 @@ services:
     env_file:
       - ./backend/.env
     volumes:
-      - ./backend/faiss_index:/app/faiss_index  # Persists your vector database
-      - ./backend/resources:/app/resources      # Accessible PDF storage
+      - ./backend/faiss_index:/app/faiss_index  # Persists vector database
+      - ./backend/resources:/app/resources      # PDF storage
     environment:
       - PDF_PATH=/app/resources/Constitution.pdf
       - FAISS_INDEX=/app/faiss_index/index.faiss
