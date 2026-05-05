@@ -22,7 +22,8 @@ def get_rag_chain():
 
     retriever=vectorstore.as_retriever(search_kwargs={"k":4})
     llm=ChatGoogleGenerativeAI(
-        model="gemini-2.5-flash",
+        # model="gemini-2.5-flash",
+        model="gemini-2.5-flash-lite",
         google_api_key=GEMINI_API_KEY
     )
 
